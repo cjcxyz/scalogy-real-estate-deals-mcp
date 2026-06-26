@@ -1,13 +1,25 @@
 {
   "name": "scalogy-real-estate-deals-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Scalogy Real Estate Deals — pay-per-call graded US real-estate investment deals (flip/BRRRR/buy-&-hold) via x402 + USDC on Base.",
   "type": "module",
   "bin": { "scalogy-real-estate-deals-mcp": "index.mjs" },
   "files": ["index.mjs", "README.md"],
   "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test"
+  },
   "keywords": ["mcp", "x402", "real-estate", "usdc", "base", "ai-agent", "deals", "flip", "brrrr"],
   "license": "MIT",
+  "author": "cjcxyz <christian@cruz-law.com>",
+  "homepage": "https://pages.scalogy.com/chris/x402/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjcxyz/scalogy-real-estate-deals-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cjcxyz/scalogy-real-estate-deals-mcp/issues"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "@x402/fetch": "^2.16.0",

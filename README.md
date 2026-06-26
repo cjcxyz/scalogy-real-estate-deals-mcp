@@ -1,5 +1,10 @@
 # Scalogy Real Estate Deals — MCP server
 
+[![npm version](https://img.shields.io/npm/v/scalogy-real-estate-deals-mcp.svg)](https://www.npmjs.com/package/scalogy-real-estate-deals-mcp)
+[![CI](https://github.com/cjcxyz/scalogy-real-estate-deals-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/cjcxyz/scalogy-real-estate-deals-mcp/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![MCP](https://img.shields.io/badge/MCP-server-blue.svg)](https://modelcontextprotocol.io)
+
 An [MCP](https://modelcontextprotocol.io) server that gives your AI agent **vetted, daily-scored
 US residential real-estate investment deals** — flip, BRRRR, and buy-&-hold — each graded
 STRONG/MODERATE/FAIR with an estimated ARV from a live comp set, gross spread, margin %, cap
