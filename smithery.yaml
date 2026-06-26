@@ -1,0 +1,32 @@
+# Smithery configuration: https://smithery.ai/docs/config#smitheryyaml
+startCommand:
+  type: stdio
+
+configSchema:
+  # JSON Schema for the config a user supplies when installing via Smithery.
+  type: object
+  required:
+    - evmPrivateKey
+  properties:
+    evmPrivateKey:
+      type: string
+      description: >-
+        A Base wallet private key funded with a few USDC. The buyer self-funds
+        each call (paid per request in USDC on Base via x402; gasless for the buyer).
+    resourceServerUrl:
+      type: string
+      default: https://x402-scalogy-production.up.railway.app
+      description: The deal API base URL.
+    clientId:
+      type: string
+      default: 9e56a91b-3157-40fd-89ca-37e50923b5c2
+      description: Which feed to query (this product's public feed id).
+    x402Network:
+      type: string
+      default: eip155:8453
+      description: Payment network (Base mainnet).
+
+commandFunction:
+  # Produces the stdio command Smithery runs to start the MCP server.
+  |-
+  config => ({ command: 'npx', args: ['-y', 'scalogy-real-estate-deals-mcp'], env: { EVM_PRIVATE_KEY: config.evmPrivateKey, RESOURCE_SERVER_URL: config.resourceServerUrl || 'https://x402-scalogy-production.up.railway.app', CLIENT_ID: config.clientId || '9e56a91b-3157-40fd-89ca-37e50923b5c2', X402_NETWORK: config.x402Network || 'eip155:8453' } })
